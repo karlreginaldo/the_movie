@@ -1,7 +1,7 @@
-import 'package:themovie/domain/entities/result.dart';
+import 'package:themovie/domain/entities/chose_genre_result.dart';
 
-class ResultModel extends Result {
-  ResultModel({
+class ChosenGenreResultModel extends ChosenGenreResult {
+  ChosenGenreResultModel({
     this.adult,
     this.backdropPath,
     this.genreIds,
@@ -37,7 +37,7 @@ class ResultModel extends Result {
   final String backdropPath;
   final List<int> genreIds;
   final int id;
-  final String originalLanguage;
+  final OriginalLanguage originalLanguage;
   final String originalTitle;
   final String overview;
   final double popularity;
@@ -48,20 +48,18 @@ class ResultModel extends Result {
   final double voteAverage;
   final int voteCount;
 
-  factory ResultModel.fromJson(Map<String, dynamic> json) => ResultModel(
+  factory ChosenGenreResultModel.fromJson(Map<String, dynamic> json) =>
+      ChosenGenreResultModel(
         adult: json["adult"],
-        backdropPath:
-            json["backdrop_path"] == null ? null : json["backdrop_path"],
+        backdropPath: json["backdrop_path"],
         genreIds: List<int>.from(json["genre_ids"].map((x) => x)),
         id: json["id"],
-        originalLanguage: json["original_language"],
+        originalLanguage: originalLanguageValues.map[json["original_language"]],
         originalTitle: json["original_title"],
         overview: json["overview"],
         popularity: json["popularity"].toDouble(),
-        posterPath: json["poster_path"] == null ? null : json["poster_path"],
-        releaseDate: json["release_date"] == null
-            ? null
-            : DateTime.parse(json["release_date"]),
+        posterPath: json["poster_path"],
+        releaseDate: DateTime.parse(json["release_date"]),
         title: json["title"],
         video: json["video"],
         voteAverage: json["vote_average"].toDouble(),
@@ -70,20 +68,38 @@ class ResultModel extends Result {
 
   Map<String, dynamic> toJson() => {
         "adult": adult,
-        "backdrop_path": backdropPath == null ? null : backdropPath,
+        "backdrop_path": backdropPath,
         "genre_ids": List<dynamic>.from(genreIds.map((x) => x)),
         "id": id,
-        "original_language": originalLanguage,
+        "original_language": originalLanguageValues.reverse[originalLanguage],
         "original_title": originalTitle,
         "overview": overview,
         "popularity": popularity,
-        "poster_path": posterPath == null ? null : posterPath,
-        "release_date": releaseDate == null
-            ? null
-            : "${releaseDate.year.toString().padLeft(4, '0')}-${releaseDate.month.toString().padLeft(2, '0')}-${releaseDate.day.toString().padLeft(2, '0')}",
+        "poster_path": posterPath,
+        "release_date":
+            "${releaseDate.year.toString().padLeft(4, '0')}-${releaseDate.month.toString().padLeft(2, '0')}-${releaseDate.day.toString().padLeft(2, '0')}",
         "title": title,
         "video": video,
         "vote_average": voteAverage,
         "vote_count": voteCount,
       };
+}
+
+enum OriginalLanguageModel { EN, SV }
+
+final originalLanguageValues =
+    EnumValues({"en": OriginalLanguage.EN, "sv": OriginalLanguage.SV});
+
+class EnumValues<T> {
+  Map<String, T> map;
+  Map<T, String> reverseMap;
+
+  EnumValues(this.map);
+
+  Map<T, String> get reverse {
+    if (reverseMap == null) {
+      reverseMap = map.map((k, v) => new MapEntry(v, k));
+    }
+    return reverseMap;
+  }
 }

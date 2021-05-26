@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:themovie/data/datasources/movie_remote_data_source.dart';
 import 'package:http/http.dart' as http;
 import 'package:themovie/data/repositories/movie_repository_impl.dart';
+import 'package:themovie/presentation/cubit/movie_cubit.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -9,25 +11,35 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  MovieRemoteDataSourceImpl remote = MovieRemoteDataSourceImpl(http.Client());
   @override
   Widget build(BuildContext context) {
-    MovieRepositoryImpl repo = MovieRepositoryImpl(remote);
-
     return Scaffold(
-        body: Container(
-      child: Center(
-        child: TextButton(
+        body: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        BlocBuilder<MovieCubit, MovieState>(
+          builder: (context, state) {
+            if (state is MovieInitial) {
+              return Text('Wait');
+            } else if (state is MovieLoading) {
+              return Center(
+                child: CircularProgressIndicator(),
+              );
+            } else if (state is MovieDetailLoaded) {
+              return Text(state.movieDetail.originalLanguage);
+            }
+            return Container();
+          },
+        ),
+        TextButton(
           onPressed: () async {
-            final result = await repo.searchMovies(query: 'Fight');
-            result.fold(
-                (failure) => print(failure), (right) => print(right.results));
+            context.read<MovieCubit>().getSpecificMovie(id: 550);
           },
           child: Text(
             'Test',
           ),
         ),
-      ),
+      ],
     ));
   }
 }

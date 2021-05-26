@@ -21,12 +21,12 @@ class MovieLoaded extends MovieState {
 }
 
 class MovieDetailLoaded extends MovieState {
-  final MovieDetail movieDeatail;
+  final MovieDetail movieDetail;
 
-  MovieDetailLoaded(this.movieDeatail);
+  MovieDetailLoaded(this.movieDetail);
 
   @override
-  List<Object> get props => [movieDeatail];
+  List<Object> get props => [movieDetail];
 }
 
 class MovieError extends MovieState {
