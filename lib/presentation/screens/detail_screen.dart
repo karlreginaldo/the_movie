@@ -50,7 +50,9 @@ class _DetailScreenState extends State<DetailScreen> {
                     Stack(
                       children: [
                         Image.network(
-                          HD_IMAGE_LINK + state.movieDetail.posterPath,
+                          state.movieDetail.posterPath != null
+                              ? HD_IMAGE_LINK + state.movieDetail.posterPath
+                              : NO_IMAGE_LINK,
                         ),
                         Positioned(
                           top: 25,
