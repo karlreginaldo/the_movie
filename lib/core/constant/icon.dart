@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'color.dart';
 
 const FAVORITE_ICON_FALSE = Icon(
   MaterialIcons.favorite_border,

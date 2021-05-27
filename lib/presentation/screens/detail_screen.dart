@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
-import 'package:themovie/core/constant/icon.dart';
-import 'package:themovie/domain/entities/movie_detail.dart';
+import '../../core/constant/icon.dart';
+import '../../domain/entities/movie_detail.dart';
 import '../../core/constant/color.dart';
-
 import '../../core/constant/string.dart';
-import '../../core/utils/genre_filter.dart';
-import '../../domain/entities/spoken_language.dart';
 import '../cubit/movie/movie_details_cubit.dart';
-import '../widgets/components/circular_progress.dart';
 import '../widgets/components/custom_text_lato.dart';
 import 'package:sizer/sizer.dart';
 

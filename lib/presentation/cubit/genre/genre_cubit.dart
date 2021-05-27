@@ -2,7 +2,6 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import '../../../core/constant/string.dart';
 import '../../../domain/entities/chose_genre.dart';
-import '../../../domain/entities/genre.dart';
 import '../../../domain/usecases/choose_genre.dart';
 import 'package:meta/meta.dart';
 part 'genre_state.dart';

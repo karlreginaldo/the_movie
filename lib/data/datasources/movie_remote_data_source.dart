@@ -4,7 +4,6 @@ import '../../core/constant/string.dart';
 import '../../core/error/exception.dart';
 import '../models/chose_genre_model.dart';
 import '../models/movie_detail_model.dart';
-import 'dart:math';
 import 'package:meta/meta.dart';
 import '../models/movie_model.dart';
 import 'package:http/http.dart' as http;

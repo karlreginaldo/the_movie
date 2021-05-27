@@ -6,7 +6,6 @@ import 'search_screen.dart';
 import '../widgets/components/custom_display_error.dart';
 import '../widgets/components/linear_progress.dart';
 import '../widgets/header.dart';
-import '../widgets/result_container_for_search.dart';
 import 'home_screen.dart';
 
 class MainScreen extends StatefulWidget {

@@ -1,4 +1,3 @@
-import 'package:equatable/equatable.dart';
 import '../entities/favorite.dart';
 import '../repositories/movie_repository.dart';
 import 'package:meta/meta.dart';

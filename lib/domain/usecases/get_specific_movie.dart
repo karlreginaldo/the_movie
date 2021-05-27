@@ -3,7 +3,6 @@ import 'package:equatable/equatable.dart';
 import '../../core/error/failure.dart';
 
 import '../../core/usecase/usecase.dart';
-import '../entities/movie.dart';
 import '../entities/movie_detail.dart';
 import '../repositories/movie_repository.dart';
 
