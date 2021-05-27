@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../widgets/components/custom_text_lato.dart';
+import 'package:sizer/sizer.dart';
+import '../widgets/components/custom_text_quick_sand.dart';
 import '../widgets/components/genre_filter_button.dart';
 import '../widgets/result_container_for_genre.dart';
 import '../widgets/result_container_for_popular_movies.dart';
-import 'package:sizer/sizer.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key key}) : super(key: key);

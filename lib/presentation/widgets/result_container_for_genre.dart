@@ -13,9 +13,8 @@ import '../cubit/favorite/favorite_cubit.dart';
 import '../cubit/genre/genre_cubit.dart';
 import '../cubit/movie/movie_details_cubit.dart';
 import '../screens/detail_screen.dart';
-import 'components/custom_text_lato.dart';
-
 import '../../dependency_injector.dart';
+import 'components/custom_text_quick_sand.dart';
 
 class ResultContainerForGenre extends StatelessWidget {
   const ResultContainerForGenre({Key key}) : super(key: key);

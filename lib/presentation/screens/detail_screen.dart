@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
+import '../widgets/components/custom_text_quick_sand.dart';
 import '../../core/constant/icon.dart';
 import '../../domain/entities/movie_detail.dart';
 import '../../core/constant/color.dart';
 import '../../core/constant/string.dart';
 import '../cubit/movie/movie_details_cubit.dart';
-import '../widgets/components/custom_text_lato.dart';
 import 'package:sizer/sizer.dart';
 
 class DetailScreen extends StatefulWidget {

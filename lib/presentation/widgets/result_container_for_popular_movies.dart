@@ -10,8 +10,8 @@ import '../cubit/movie/movie_details_cubit.dart';
 import '../cubit/popular/popular_cubit.dart';
 import 'package:sizer/sizer.dart';
 import '../screens/detail_screen.dart';
-import 'components/custom_text_lato.dart';
 import '../../dependency_injector.dart';
+import 'components/custom_text_quick_sand.dart';
 import 'components/linear_progress.dart';
 
 class ResultContainerForPopularMovies extends StatefulWidget {

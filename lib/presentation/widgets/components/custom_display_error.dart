@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'custom_text_lato.dart';
 import 'package:sizer/sizer.dart';
+import 'custom_text_quick_sand.dart';
 
 class CustomDisplayError extends StatelessWidget {
   const CustomDisplayError({Key key, this.message, this.color, this.title})

@@ -13,7 +13,7 @@ import '../cubit/movie/movie_details_cubit.dart';
 import '../screens/detail_screen.dart';
 import 'package:sizer/sizer.dart';
 import '../../dependency_injector.dart';
-import 'components/custom_text_lato.dart';
+import 'components/custom_text_quick_sand.dart';
 
 class ResultContainerForSearch extends StatefulWidget {
   const ResultContainerForSearch({

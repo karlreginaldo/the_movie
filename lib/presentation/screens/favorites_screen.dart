@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../widgets/components/custom_display_error.dart';
+import '../widgets/components/custom_text_quick_sand.dart';
 import '../widgets/result_container_for_favorites.dart';
 import '../cubit/favorite/favorite_cubit.dart';
-import '../widgets/components/custom_text_lato.dart';
 import 'package:sizer/sizer.dart';
 import '../widgets/components/linear_progress.dart';
 
