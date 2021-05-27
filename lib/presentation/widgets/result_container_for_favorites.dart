@@ -132,7 +132,7 @@ class _ResultContainerForFavoriteState
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        CustomTextLato(
+                        CustomTextQuickSand(
                           widget.movie.title,
                           size: 10.0.sp,
                           weight: FontWeight.bold,
@@ -141,7 +141,7 @@ class _ResultContainerForFavoriteState
                         SizedBox(
                           height: 5,
                         ),
-                        CustomTextLato(
+                        CustomTextQuickSand(
                           widget.movie.overview,
                           color: Colors.grey,
                           maxLines: 6,
@@ -164,7 +164,7 @@ class _ResultContainerForFavoriteState
                         SizedBox(
                           width: 5,
                         ),
-                        CustomTextLato(
+                        CustomTextQuickSand(
                           '${widget.movie.average}',
                           color: Colors.grey,
                         ),
@@ -175,7 +175,7 @@ class _ResultContainerForFavoriteState
                     ),
                     Row(
                       children: [
-                        CustomTextLato(
+                        CustomTextQuickSand(
                           'Genre: ',
                           overflow: TextOverflow.clip,
                           color: Colors.grey,
@@ -184,7 +184,7 @@ class _ResultContainerForFavoriteState
                           child: Wrap(
                             children: genreFilter(widget.movie.genresId)
                                 .map(
-                                  (genre) => CustomTextLato(
+                                  (genre) => CustomTextQuickSand(
                                     genre.name + ' ',
                                     overflow: TextOverflow.clip,
                                     color: Colors.grey,

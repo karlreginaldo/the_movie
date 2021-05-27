@@ -74,7 +74,7 @@ class _DetailScreenState extends State<DetailScreen> {
                           SizedBox(
                             height: 5,
                           ),
-                          CustomTextLato(
+                          CustomTextQuickSand(
                             state.movieDetail.tagline,
                             overflow: TextOverflow.clip,
                             size: 12.0.sp,
@@ -88,7 +88,7 @@ class _DetailScreenState extends State<DetailScreen> {
                           SizedBox(
                             height: 10,
                           ),
-                          CustomTextLato(
+                          CustomTextQuickSand(
                             state.movieDetail.overview,
                             color: Colors.white.withOpacity(0.7),
                           ),
@@ -98,7 +98,7 @@ class _DetailScreenState extends State<DetailScreen> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              CustomTextLato(
+                              CustomTextQuickSand(
                                 state.movieDetail.status,
                                 color: Colors.white.withOpacity(0.9),
                               ),
@@ -107,7 +107,7 @@ class _DetailScreenState extends State<DetailScreen> {
                           SizedBox(
                             height: 5,
                           ),
-                          CustomTextLato(
+                          CustomTextQuickSand(
                             state.movieDetail.releaseDate.year.toString(),
                             color: Colors.white.withOpacity(0.9),
                           ),
@@ -119,7 +119,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                 .map(
                                   (spokenLanguage) => Container(
                                     margin: EdgeInsets.only(right: 10),
-                                    child: CustomTextLato(
+                                    child: CustomTextQuickSand(
                                       spokenLanguage.englishName,
                                       color: Colors.white.withOpacity(0.9),
                                     ),
@@ -130,7 +130,7 @@ class _DetailScreenState extends State<DetailScreen> {
                           SizedBox(
                             height: 25,
                           ),
-                          CustomTextLato(
+                          CustomTextQuickSand(
                             'Production Companies',
                             size: 15.0.sp,
                             weight: FontWeight.bold,
@@ -170,7 +170,7 @@ class GenreAndRuntime extends StatelessWidget {
             child: Wrap(
               children: movieDetail.genres
                   .map(
-                    (genre) => CustomTextLato(
+                    (genre) => CustomTextQuickSand(
                       genre.name + ', ',
                       overflow: TextOverflow.clip,
                       color: Colors.grey,
@@ -186,7 +186,7 @@ class GenreAndRuntime extends StatelessWidget {
             indent: 10,
           ),
           Expanded(
-            child: CustomTextLato(
+            child: CustomTextQuickSand(
               'Runtime: ${movieDetail.runtime} min',
               color: Colors.grey,
             ),
@@ -210,7 +210,7 @@ class TitleAndRate extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Expanded(
-          child: CustomTextLato(
+          child: CustomTextQuickSand(
             movieDetail.title,
             overflow: TextOverflow.clip,
             size: 18.0.sp,
@@ -230,7 +230,7 @@ class TitleAndRate extends StatelessWidget {
             SizedBox(
               width: 5,
             ),
-            CustomTextLato(
+            CustomTextQuickSand(
               movieDetail.voteAverage.toString(),
               color: Colors.grey,
             ),
@@ -269,7 +269,7 @@ class ProductionCompanies extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
-                    CustomTextLato(
+                    CustomTextQuickSand(
                       '${company.name} ' + company.originCountry,
                       size: 10.0.sp,
                     ),

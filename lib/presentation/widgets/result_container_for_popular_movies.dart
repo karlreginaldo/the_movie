@@ -129,7 +129,7 @@ class _ResultContainerForPopularMoviesState
                                   ],
                                 ),
                               ),
-                              CustomTextLato(
+                              CustomTextQuickSand(
                                 movie.title + ' (${movie.releaseDate.year})',
                                 size: 10.0.sp,
                                 weight: FontWeight.bold,
@@ -151,7 +151,7 @@ class _ResultContainerForPopularMoviesState
                                   SizedBox(
                                     width: 5,
                                   ),
-                                  CustomTextLato(
+                                  CustomTextQuickSand(
                                     movie.voteAverage.toString(),
                                     color: Colors.grey,
                                   )

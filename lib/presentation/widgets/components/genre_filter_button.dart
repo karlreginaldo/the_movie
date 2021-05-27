@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../core/constant/color.dart';
@@ -18,7 +19,7 @@ class GenreFilterButton extends StatelessWidget {
         return genreList
             .map(
               (genre) => PopupMenuItem(
-                child: CustomTextLato(genre.name),
+                child: CustomTextQuickSand(genre.name),
                 value: genre.id,
               ),
             )

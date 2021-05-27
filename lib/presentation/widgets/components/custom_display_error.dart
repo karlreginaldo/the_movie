@@ -15,7 +15,7 @@ class CustomDisplayError extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          CustomTextLato(
+          CustomTextQuickSand(
             title,
             size: 15.0.sp,
             color: color ?? Colors.red,
@@ -23,7 +23,7 @@ class CustomDisplayError extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          CustomTextLato(
+          CustomTextQuickSand(
             message,
             size: 10.0.sp,
             color: Colors.grey,

@@ -131,7 +131,7 @@ class _ResultContainerForSearchState extends State<ResultContainerForSearch> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        CustomTextLato(
+                        CustomTextQuickSand(
                           widget.movie.title,
                           size: 10.0.sp,
                           weight: FontWeight.bold,
@@ -140,7 +140,7 @@ class _ResultContainerForSearchState extends State<ResultContainerForSearch> {
                         SizedBox(
                           height: 5,
                         ),
-                        CustomTextLato(
+                        CustomTextQuickSand(
                           widget.movie.overview,
                           color: Colors.grey,
                           maxLines: 6,
@@ -163,7 +163,7 @@ class _ResultContainerForSearchState extends State<ResultContainerForSearch> {
                         SizedBox(
                           width: 5,
                         ),
-                        CustomTextLato(
+                        CustomTextQuickSand(
                           '${widget.movie.voteAverage}',
                           color: Colors.grey,
                         ),
@@ -174,7 +174,7 @@ class _ResultContainerForSearchState extends State<ResultContainerForSearch> {
                     ),
                     Row(
                       children: [
-                        CustomTextLato(
+                        CustomTextQuickSand(
                           'Genre: ',
                           overflow: TextOverflow.clip,
                           color: Colors.grey,
@@ -183,7 +183,7 @@ class _ResultContainerForSearchState extends State<ResultContainerForSearch> {
                           child: Wrap(
                             children: genreFilter(widget.movie.genreIds)
                                 .map(
-                                  (genre) => CustomTextLato(
+                                  (genre) => CustomTextQuickSand(
                                     genre.name + ' ',
                                     overflow: TextOverflow.clip,
                                     color: Colors.grey,

@@ -25,7 +25,7 @@ class ResultContainerForGenre extends StatelessWidget {
     return BlocBuilder<GenreCubit, GenreState>(
       builder: (context, state) {
         if (state is GenreLoading) {
-          return Center(child: CustomTextLato('Please Wait...'));
+          return Center(child: CustomTextQuickSand('Please Wait...'));
         } else if (state is GenreLoaded) {
           return Column(
             children: [
@@ -160,7 +160,7 @@ class _MovieContainerState extends State<MovieContainer> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        CustomTextLato(
+                        CustomTextQuickSand(
                           widget.movie.title +
                               '(${widget.movie.releaseDate.year})',
                           size: 10.0.sp,
@@ -170,7 +170,7 @@ class _MovieContainerState extends State<MovieContainer> {
                         SizedBox(
                           height: 5,
                         ),
-                        CustomTextLato(
+                        CustomTextQuickSand(
                           widget.movie.overview,
                           color: Colors.grey,
                           maxLines: 6,
@@ -193,7 +193,7 @@ class _MovieContainerState extends State<MovieContainer> {
                         SizedBox(
                           width: 5,
                         ),
-                        CustomTextLato(
+                        CustomTextQuickSand(
                           widget.movie.voteAverage.toString(),
                           color: Colors.grey,
                         ),
@@ -204,7 +204,7 @@ class _MovieContainerState extends State<MovieContainer> {
                     ),
                     Row(
                       children: [
-                        CustomTextLato(
+                        CustomTextQuickSand(
                           'Genre: ',
                           overflow: TextOverflow.clip,
                           color: Colors.grey,
@@ -213,7 +213,7 @@ class _MovieContainerState extends State<MovieContainer> {
                           child: Wrap(
                             children: genreFilter(widget.movie.genreIds)
                                 .map(
-                                  (genre) => CustomTextLato(
+                                  (genre) => CustomTextQuickSand(
                                     genre.name + ' ',
                                     overflow: TextOverflow.clip,
                                     color: Colors.grey,

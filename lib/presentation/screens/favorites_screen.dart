@@ -29,7 +29,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
               ? Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    CustomTextLato(
+                    CustomTextQuickSand(
                       'Favorite Movies',
                       size: 18.0.sp,
                       weight: FontWeight.bold,

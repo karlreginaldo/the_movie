@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25),
-          child: CustomTextLato(
+          child: CustomTextQuickSand(
             'Popular Movies',
             size: 18.0.sp,
             weight: FontWeight.bold,
@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 25),
           child: Row(
             children: [
-              CustomTextLato(
+              CustomTextQuickSand(
                 'Genres',
                 size: 18.0.sp,
                 weight: FontWeight.bold,

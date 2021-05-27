@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CustomTextLato extends StatelessWidget {
+class CustomTextQuickSand extends StatelessWidget {
   final double size;
   final FontWeight weight;
   final FontStyle style;
@@ -10,7 +10,7 @@ class CustomTextLato extends StatelessWidget {
   final double spacing;
   final int maxLines;
   final TextOverflow overflow;
-  CustomTextLato(this.text,
+  CustomTextQuickSand(this.text,
       {this.size,
       this.overflow,
       this.weight,
