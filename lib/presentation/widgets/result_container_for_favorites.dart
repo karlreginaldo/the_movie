@@ -144,7 +144,7 @@ class _ResultContainerForFavoriteState
                         CustomTextQuickSand(
                           widget.movie.overview,
                           color: Colors.grey,
-                          maxLines: 6,
+                          maxLines: 3,
                         ),
                       ],
                     ),

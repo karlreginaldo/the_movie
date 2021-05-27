@@ -143,7 +143,7 @@ class _ResultContainerForSearchState extends State<ResultContainerForSearch> {
                         CustomTextQuickSand(
                           widget.movie.overview,
                           color: Colors.grey,
-                          maxLines: 6,
+                          maxLines: 3,
                         ),
                       ],
                     ),

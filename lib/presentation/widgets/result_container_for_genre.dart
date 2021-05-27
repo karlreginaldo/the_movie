@@ -173,7 +173,7 @@ class _MovieContainerState extends State<MovieContainer> {
                         CustomTextQuickSand(
                           widget.movie.overview,
                           color: Colors.grey,
-                          maxLines: 6,
+                          maxLines: 3,
                         ),
                       ],
                     ),
