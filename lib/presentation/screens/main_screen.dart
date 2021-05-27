@@ -1,45 +1,88 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:themovie/data/datasources/movie_remote_data_source.dart';
-import 'package:http/http.dart' as http;
-import 'package:themovie/data/repositories/movie_repository_impl.dart';
-import 'package:themovie/presentation/cubit/movie_cubit.dart';
+import '../cubit/home/home_cubit.dart';
+import 'favorites_screen.dart';
+import 'search_screen.dart';
+import '../widgets/components/custom_display_error.dart';
+import '../widgets/components/linear_progress.dart';
+import '../widgets/header.dart';
+import '../widgets/result_container_for_search.dart';
+import 'home_screen.dart';
 
 class MainScreen extends StatefulWidget {
+  MainScreen({Key key}) : super(key: key);
+
   @override
   _MainScreenState createState() => _MainScreenState();
 }
 
+Duration myDuration = Duration(milliseconds: 200);
+
 class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        BlocBuilder<MovieCubit, MovieState>(
-          builder: (context, state) {
-            if (state is MovieInitial) {
-              return Text('Wait');
-            } else if (state is MovieLoading) {
-              return Center(
-                child: CircularProgressIndicator(),
-              );
-            } else if (state is MovieDetailLoaded) {
-              return Text(state.movieDetail.originalLanguage);
-            }
-            return Container();
-          },
-        ),
-        TextButton(
-          onPressed: () async {
-            context.read<MovieCubit>().getSpecificMovie(id: 550);
-          },
-          child: Text(
-            'Test',
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 25, left: 25, right: 25),
+                child: Header(),
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              BlocBuilder<HomeCubit, HomeState>(
+                builder: (context, state) {
+                  if (state is HomeInitial) {
+                    return AnimatedContainer(
+                      duration: myDuration,
+                      child: HomeScreen(),
+                    );
+                  } else if (state is Favorites) {
+                    return Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: AnimatedContainer(
+                        duration: myDuration,
+                        child: FavoritesScreen(),
+                      ),
+                    );
+                  } else if (state is SearchLoading) {
+                    return LinearProgress();
+                  } else if (state is MovieLoaded) {
+                    return AnimatedContainer(
+                      duration: myDuration,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: SearchScreen(state.movie),
+                      ),
+                    );
+                  } else if (state is SearchEmpty) {
+                    return Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: CustomDisplayError(
+                        title: 'Empty',
+                        message: state.message,
+                      ),
+                    );
+                  } else if (state is SearchError) {
+                    return Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: CustomDisplayError(
+                        title: 'Server Error',
+                        message: state.message,
+                      ),
+                    );
+                  }
+
+                  return Container();
+                },
+              ),
+            ],
           ),
         ),
-      ],
-    ));
+      ),
+    );
   }
 }

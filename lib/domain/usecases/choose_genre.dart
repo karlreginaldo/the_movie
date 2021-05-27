@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:themovie/core/error/failure.dart';
-import 'package:themovie/core/usecase/usecase.dart';
-import 'package:themovie/domain/entities/chose_genre.dart';
-import 'package:themovie/domain/repositories/movie_repository.dart';
+import '../../core/error/failure.dart';
+import '../../core/usecase/usecase.dart';
+import '../entities/chose_genre.dart';
+import '../repositories/movie_repository.dart';
 
 class ChooseGenre implements UseCase<ChosenGenre, ChooseGenreParams> {
   final MovieRepository _repo;

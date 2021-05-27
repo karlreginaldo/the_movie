@@ -1,8 +1,8 @@
-import 'package:themovie/core/error/failure.dart';
+import '../../core/error/failure.dart';
 import 'package:dartz/dartz.dart';
-import 'package:themovie/core/usecase/usecase.dart';
-import 'package:themovie/domain/entities/popular.dart';
-import 'package:themovie/domain/repositories/movie_repository.dart';
+import '../../core/usecase/usecase.dart';
+import '../entities/popular.dart';
+import '../repositories/movie_repository.dart';
 
 class GetInitialPopularMovies implements UseCase<Popular, NoParams> {
   final MovieRepository _repo;

@@ -1,4 +1,4 @@
-import 'package:themovie/domain/entities/result.dart';
+import '../../domain/entities/result.dart';
 
 class ResultModel extends Result {
   ResultModel({
@@ -59,9 +59,7 @@ class ResultModel extends Result {
         overview: json["overview"],
         popularity: json["popularity"].toDouble(),
         posterPath: json["poster_path"] == null ? null : json["poster_path"],
-        releaseDate: json["release_date"] == null
-            ? null
-            : DateTime.parse(json["release_date"]),
+        releaseDate: DateTime.parse(json["release_date"]),
         title: json["title"],
         video: json["video"],
         voteAverage: json["vote_average"].toDouble(),
@@ -78,9 +76,8 @@ class ResultModel extends Result {
         "overview": overview,
         "popularity": popularity,
         "poster_path": posterPath == null ? null : posterPath,
-        "release_date": releaseDate == null
-            ? null
-            : "${releaseDate.year.toString().padLeft(4, '0')}-${releaseDate.month.toString().padLeft(2, '0')}-${releaseDate.day.toString().padLeft(2, '0')}",
+        "release_date":
+            "${releaseDate.year.toString().padLeft(4, '0')}-${releaseDate.month.toString().padLeft(2, '0')}-${releaseDate.day.toString().padLeft(2, '0')}",
         "title": title,
         "video": video,
         "vote_average": voteAverage,

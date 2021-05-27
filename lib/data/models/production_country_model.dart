@@ -1,4 +1,4 @@
-import 'package:themovie/domain/entities/production_country.dart';
+import '../../domain/entities/production_country.dart';
 
 class ProductionCountryModel extends ProductionCountry {
   ProductionCountryModel({

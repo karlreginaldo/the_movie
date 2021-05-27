@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
-import 'package:themovie/domain/entities/production_company.dart';
-import 'package:themovie/domain/entities/production_country.dart';
-import 'package:themovie/domain/entities/spoken_language.dart';
+import 'production_company.dart';
+import 'production_country.dart';
+import 'spoken_language.dart';
 
 import 'genre.dart';
 

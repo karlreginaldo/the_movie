@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import 'package:themovie/data/models/production_company_model.dart';
-import 'package:themovie/data/models/production_country_model.dart';
-import 'package:themovie/data/models/spoken_lanuage_model.dart';
-import 'package:themovie/domain/entities/movie_detail.dart';
+import 'production_company_model.dart';
+import 'production_country_model.dart';
+import 'spoken_lanuage_model.dart';
+import '../../domain/entities/movie_detail.dart';
 
 import 'genre_model.dart';
 

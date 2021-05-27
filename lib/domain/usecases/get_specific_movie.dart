@@ -1,11 +1,11 @@
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
-import 'package:themovie/core/error/failure.dart';
+import '../../core/error/failure.dart';
 
-import 'package:themovie/core/usecase/usecase.dart';
-import 'package:themovie/domain/entities/movie.dart';
-import 'package:themovie/domain/entities/movie_detail.dart';
-import 'package:themovie/domain/repositories/movie_repository.dart';
+import '../../core/usecase/usecase.dart';
+import '../entities/movie.dart';
+import '../entities/movie_detail.dart';
+import '../repositories/movie_repository.dart';
 
 class GetSpecificMovie implements UseCase<MovieDetail, GetSpecificMovieParams> {
   final MovieRepository _repo;

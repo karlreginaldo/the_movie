@@ -1,4 +1,4 @@
-import 'package:themovie/domain/entities/chose_genre_result.dart';
+import '../../domain/entities/chose_genre_result.dart';
 
 class ChosenGenreResultModel extends ChosenGenreResult {
   ChosenGenreResultModel({

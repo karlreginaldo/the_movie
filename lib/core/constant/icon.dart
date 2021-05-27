@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:themovie/core/constant/color.dart';
+import 'package:flutter_icons/flutter_icons.dart';
+import 'color.dart';
 
-const FAVORITE_ICON_FALSE = FaIcon(
-  FontAwesomeIcons.heart,
-  color: SCAFFOLD_COLOR,
+const FAVORITE_ICON_FALSE = Icon(
+  MaterialIcons.favorite_border,
+  color: Colors.green,
 );
-const FAVORITE_ICON_TRUE = FaIcon(
-  FontAwesomeIcons.solidHeart,
-  color: Colors.white,
+const FAVORITE_ICON_TRUE = Icon(
+  MaterialIcons.favorite,
+  color: Colors.green,
 );
-const SEARCH_ICON = FaIcon(
-  FontAwesomeIcons.search,
-  color: Colors.white,
+const SEARCH_ICON = Icon(MaterialIcons.search, color: Colors.green);
+const CLOSE_ICON = Icon(MaterialIcons.close, color: Colors.green);
+const FAVORITE_ICON = Icon(MaterialIcons.favorite, color: Colors.green);
+
+const MENU_BAR_ICON = Icon(MaterialIcons.menu, color: Colors.green);
+const DROP_DOWN_ICON = Icon(
+  MaterialIcons.arrow_drop_down,
+  color: Colors.green,
 );
-const NOTIFICATION_ICON = FaIcon(
-  FontAwesomeIcons.bell,
-  color: Colors.white,
-);
+
+const BACK_BUTTON_ICON = Icon(MaterialIcons.arrow_back, color: Colors.green);

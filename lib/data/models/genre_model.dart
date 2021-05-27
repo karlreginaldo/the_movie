@@ -1,4 +1,4 @@
-import 'package:themovie/domain/entities/genre.dart';
+import '../../domain/entities/genre.dart';
 
 class GenreModel extends Genre {
   GenreModel({

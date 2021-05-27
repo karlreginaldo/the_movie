@@ -1,17 +1,19 @@
-import 'package:themovie/core/error/exception.dart';
-import 'package:themovie/core/error/failure.dart';
+import '../../core/error/exception.dart';
+import '../../core/error/failure.dart';
 import 'package:dartz/dartz.dart';
-import 'package:themovie/data/datasources/movie_remote_data_source.dart';
-import 'package:themovie/domain/entities/chose_genre.dart';
-import 'package:themovie/domain/entities/movie_detail.dart';
-import 'package:themovie/domain/entities/movie.dart';
-import 'package:themovie/domain/entities/popular.dart';
-import 'package:themovie/domain/repositories/movie_repository.dart';
+import '../datasources/movie_local_data_source.dart';
+import '../datasources/movie_remote_data_source.dart';
+import '../../domain/entities/chose_genre.dart';
+import '../../domain/entities/favorite.dart';
+import '../../domain/entities/movie_detail.dart';
+import '../../domain/entities/movie.dart';
+import '../../domain/entities/popular.dart';
+import '../../domain/repositories/movie_repository.dart';
 
 class MovieRepositoryImpl implements MovieRepository {
   final MovieRemoteDataSource _remote;
-
-  MovieRepositoryImpl(this._remote);
+  final MovieLocalDataSource _local;
+  MovieRepositoryImpl(this._remote, this._local);
 
   @override
   Future<Either<Failure, MovieDetail>> getSpecificMovie({int id}) async {
@@ -57,6 +59,23 @@ class MovieRepositoryImpl implements MovieRepository {
     } on ServerException {
       return Left(
         ServerFailure(),
+      );
+    }
+  }
+
+  @override
+  Future<void> addFavorite({fav}) async => await _local.addFavorite(fav: fav);
+  @override
+  Future<void> delFavorite({int id}) async => await _local.delFavorite(id: id);
+
+  @override
+  Future<Either<Failure, List<Favorite>>> getFavorites() async {
+    try {
+      final _favorites = await _local.getFavorites();
+      return Right(_favorites);
+    } on CachceException {
+      return Left(
+        CacheFailure(),
       );
     }
   }

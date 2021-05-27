@@ -1,4 +1,4 @@
-import 'package:themovie/domain/entities/spoken_language.dart';
+import '../../domain/entities/spoken_language.dart';
 
 class SpokenLanguageModel extends SpokenLanguage {
   SpokenLanguageModel({

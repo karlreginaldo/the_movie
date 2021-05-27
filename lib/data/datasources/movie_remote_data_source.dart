@@ -1,14 +1,14 @@
 import 'dart:convert';
 
-import 'package:themovie/core/constant/string.dart';
-import 'package:themovie/core/error/exception.dart';
-import 'package:themovie/data/models/chose_genre_model.dart';
-import 'package:themovie/data/models/movie_detail_model.dart';
-
+import '../../core/constant/string.dart';
+import '../../core/error/exception.dart';
+import '../models/chose_genre_model.dart';
+import '../models/movie_detail_model.dart';
+import 'dart:math';
 import 'package:meta/meta.dart';
-import 'package:themovie/data/models/movie_model.dart';
+import '../models/movie_model.dart';
 import 'package:http/http.dart' as http;
-import 'package:themovie/data/models/popular_model.dart';
+import '../models/popular_model.dart';
 
 abstract class MovieRemoteDataSource {
   ///Link https://api.themoviedb.org/3/movie/$id?api_key=API_KEY
@@ -55,7 +55,7 @@ class MovieRemoteDataSourceImpl implements MovieRemoteDataSource {
   @override
   Future<PopularModel> getInitialPopularMovies() async {
     final _response = await _client.get(
-      'https://api.themoviedb.org/3/movie/popular?api_key=$API_KEY&language=en-US&page=1',
+      'https://api.themoviedb.org/3/movie/popular?api_key=$API_KEY&language=en-US&page=3',
       headers: {
         'Content-Type': 'application/json',
       },

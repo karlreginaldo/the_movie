@@ -1,4 +1,4 @@
-import 'package:themovie/domain/entities/production_company.dart';
+import '../../domain/entities/production_company.dart';
 
 class ProductionCompanyModel extends ProductionCompany {
   ProductionCompanyModel({

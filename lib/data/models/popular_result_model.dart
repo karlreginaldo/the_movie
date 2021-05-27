@@ -1,4 +1,4 @@
-import 'package:themovie/domain/entities/popular_result.dart';
+import '../../domain/entities/popular_result.dart';
 
 class PopularResultModel extends PopularResult {
   PopularResultModel({

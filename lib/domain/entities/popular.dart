@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import 'package:themovie/domain/entities/popular_result.dart';
+import 'popular_result.dart';
 
 class Popular extends Equatable {
   Popular({
