@@ -27,9 +27,9 @@ class HomeCubit extends Cubit<HomeState> {
 
       _eitherMoviesOrFailure.fold(
         (failure) => emit(SearchError(SERVER_FAILURE_MESSAGE)),
-        (movie) => emit(
-          MovieLoaded(movie),
-        ),
+        (movie) => emit(movie.results.isNotEmpty
+            ? MovieLoaded(movie)
+            : SearchEmpty('Can\'t find the movie')),
       );
     }
   }
