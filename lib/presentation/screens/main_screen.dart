@@ -54,7 +54,7 @@ class _MainScreenState extends State<MainScreen> {
                       duration: myDuration,
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10),
-                        child: SearchScreen(state.movie),
+                        child: SearchScreen(state.movies),
                       ),
                     );
                   } else if (state is SearchEmpty) {

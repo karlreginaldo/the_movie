@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../widgets/favorite_list_view_container.dart';
 import '../widgets/components/custom_display_error.dart';
 import '../widgets/components/custom_text_quick_sand.dart';
-import '../widgets/result_container_for_favorites.dart';
 import '../cubit/favorite/favorite_cubit.dart';
 import 'package:sizer/sizer.dart';
 import '../widgets/components/linear_progress.dart';
@@ -40,7 +40,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                     Column(
                       children: state.favorites
                           .map(
-                            (fav) => ResultContainerForFavorite(
+                            (fav) => FavoriteListViewContainer(
                               movie: fav,
                             ),
                           )

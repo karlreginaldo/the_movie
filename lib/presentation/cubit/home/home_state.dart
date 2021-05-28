@@ -23,12 +23,12 @@ class SearchLoading extends HomeState {
 }
 
 class MovieLoaded extends HomeState {
-  final Movie movie;
+  final List<Movie> movies;
 
-  MovieLoaded(this.movie);
+  MovieLoaded(this.movies);
 
   @override
-  List<Object> get props => [movie];
+  List<Object> get props => [movies];
 }
 
 class SearchEmpty extends HomeState {

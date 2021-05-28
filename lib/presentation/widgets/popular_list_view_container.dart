@@ -14,14 +14,13 @@ import '../../dependency_injector.dart';
 import 'components/custom_text_quick_sand.dart';
 import 'components/linear_progress.dart';
 
-class ResultContainerForPopularMovies extends StatefulWidget {
+class PopularListViewContainer extends StatefulWidget {
   @override
-  _ResultContainerForPopularMoviesState createState() =>
-      _ResultContainerForPopularMoviesState();
+  _PopularListViewContainerState createState() =>
+      _PopularListViewContainerState();
 }
 
-class _ResultContainerForPopularMoviesState
-    extends State<ResultContainerForPopularMovies> {
+class _PopularListViewContainerState extends State<PopularListViewContainer> {
   @override
   void initState() {
     super.initState();
@@ -64,7 +63,7 @@ class _ResultContainerForPopularMoviesState
           return SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
-                children: state.popular.results
+                children: state.movies
                     .map(
                       (movie) => GestureDetector(
                         onTap: () => toDetailScreen(movie.id),

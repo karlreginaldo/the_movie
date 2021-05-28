@@ -12,12 +12,12 @@ class GenreInitial extends GenreState {}
 class GenreLoading extends GenreState {}
 
 class GenreLoaded extends GenreState {
-  final ChosenGenre genre;
+  final List<Movie> movies;
 
-  GenreLoaded(this.genre);
+  GenreLoaded(this.movies);
 
   @override
-  List<Object> get props => [genre];
+  List<Object> get props => [movies];
 }
 
 class GenreError extends GenreState {

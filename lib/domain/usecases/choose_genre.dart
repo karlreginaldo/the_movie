@@ -1,17 +1,17 @@
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
+import '../entities/movie.dart';
 import '../../core/error/failure.dart';
 import '../../core/usecase/usecase.dart';
-import '../entities/chose_genre.dart';
 import '../repositories/movie_repository.dart';
 
-class ChooseGenre implements UseCase<ChosenGenre, ChooseGenreParams> {
+class ChooseGenre implements UseCase<List<Movie>, ChooseGenreParams> {
   final MovieRepository _repo;
 
   ChooseGenre(this._repo);
 
   @override
-  Future<Either<Failure, ChosenGenre>> call(ChooseGenreParams params) async =>
+  Future<Either<Failure, List<Movie>>> call(ChooseGenreParams params) async =>
       await _repo.chooseGenre(genreID: params.genreID);
 }
 

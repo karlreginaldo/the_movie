@@ -7,27 +7,27 @@ import '../../core/constant/string.dart';
 import '../../core/utils/favorite_filter.dart';
 import '../../core/utils/genre_filter.dart';
 import '../../data/models/favorite_model.dart';
-import '../../domain/entities/result.dart';
+import '../../domain/entities/favorite.dart';
 import '../cubit/favorite/favorite_cubit.dart';
 import '../cubit/movie/movie_details_cubit.dart';
-import '../screens/detail_screen.dart';
 import 'package:sizer/sizer.dart';
+import '../screens/detail_screen.dart';
 import '../../dependency_injector.dart';
 import 'components/custom_text_quick_sand.dart';
 
-class ResultContainerForSearch extends StatefulWidget {
-  const ResultContainerForSearch({
+class FavoriteListViewContainer extends StatefulWidget {
+  const FavoriteListViewContainer({
     Key key,
     @required this.movie,
   }) : super(key: key);
-  final Result movie;
+  final Favorite movie;
 
   @override
-  _ResultContainerForSearchState createState() =>
-      _ResultContainerForSearchState();
+  _FavoriteListViewContainerState createState() =>
+      _FavoriteListViewContainerState();
 }
 
-class _ResultContainerForSearchState extends State<ResultContainerForSearch> {
+class _FavoriteListViewContainerState extends State<FavoriteListViewContainer> {
   @override
   void initState() {
     super.initState();
@@ -101,11 +101,11 @@ class _ResultContainerForSearchState extends State<ResultContainerForSearch> {
                               onPressed: () {
                                 context.read<FavoriteCubit>().addFavorite(
                                       fav: FavoriteModel(
-                                        average: widget.movie.voteAverage,
+                                        average: widget.movie.average,
                                         id: widget.movie.id,
                                         overview: widget.movie.overview,
                                         title: widget.movie.title,
-                                        genresId: widget.movie.genreIds,
+                                        genresId: widget.movie.genresId,
                                         posterPath: widget.movie.posterPath,
                                       ),
                                     );
@@ -154,7 +154,7 @@ class _ResultContainerForSearchState extends State<ResultContainerForSearch> {
                       children: [
                         SmoothStarRating(
                             allowHalfRating: false,
-                            rating: widget.movie.voteAverage / 2,
+                            rating: widget.movie.average / 2,
                             isReadOnly: true,
                             color: Colors.green,
                             size: 15,
@@ -164,7 +164,7 @@ class _ResultContainerForSearchState extends State<ResultContainerForSearch> {
                           width: 5,
                         ),
                         CustomTextQuickSand(
-                          '${widget.movie.voteAverage}',
+                          '${widget.movie.average}',
                           color: Colors.grey,
                         ),
                       ],
@@ -181,7 +181,7 @@ class _ResultContainerForSearchState extends State<ResultContainerForSearch> {
                         ),
                         Expanded(
                           child: Wrap(
-                            children: genreFilter(widget.movie.genreIds)
+                            children: genreFilter(widget.movie.genresId)
                                 .map(
                                   (genre) => CustomTextQuickSand(
                                     genre.name + ' ',

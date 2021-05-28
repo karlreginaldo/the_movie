@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sizer/sizer.dart';
+import '../cubit/genre/genre_cubit.dart';
+import '../widgets/movie_list_container.dart';
+import '../widgets/popular_list_view_container.dart';
 import '../widgets/components/custom_text_quick_sand.dart';
 import '../widgets/components/genre_filter_button.dart';
-import '../widgets/result_container_for_genre.dart';
-import '../widgets/result_container_for_popular_movies.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key key}) : super(key: key);
@@ -31,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         Padding(
           padding: const EdgeInsets.only(left: 5),
-          child: ResultContainerForPopularMovies(),
+          child: PopularListViewContainer(),
         ),
         SizedBox(
           height: 50,
@@ -57,7 +59,26 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: ResultContainerForGenre(),
+          child: BlocBuilder<GenreCubit, GenreState>(
+            builder: (context, state) {
+              if (state is GenreLoading) {
+                return Center(child: CustomTextQuickSand('Please Wait...'));
+              } else if (state is GenreLoaded) {
+                return Column(
+                  children: [
+                    Column(
+                      children: state.movies
+                          .map((movie) => MoviesListContainer(
+                                movie: movie,
+                              ))
+                          .toList(),
+                    ),
+                  ],
+                );
+              }
+              return Container();
+            },
+          ),
         )
       ],
     );

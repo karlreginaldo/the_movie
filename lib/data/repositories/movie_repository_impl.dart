@@ -3,11 +3,9 @@ import '../../core/error/failure.dart';
 import 'package:dartz/dartz.dart';
 import '../datasources/movie_local_data_source.dart';
 import '../datasources/movie_remote_data_source.dart';
-import '../../domain/entities/chose_genre.dart';
 import '../../domain/entities/favorite.dart';
 import '../../domain/entities/movie_detail.dart';
 import '../../domain/entities/movie.dart';
-import '../../domain/entities/popular.dart';
 import '../../domain/repositories/movie_repository.dart';
 
 class MovieRepositoryImpl implements MovieRepository {
@@ -28,7 +26,7 @@ class MovieRepositoryImpl implements MovieRepository {
   }
 
   @override
-  Future<Either<Failure, Movie>> searchMovies({String query}) async {
+  Future<Either<Failure, List<Movie>>> searchMovies({String query}) async {
     try {
       final _movies = await _remote.searchMovies(query: query);
       return Right(_movies);
@@ -40,7 +38,7 @@ class MovieRepositoryImpl implements MovieRepository {
   }
 
   @override
-  Future<Either<Failure, Popular>> getInitialPopularMovies() async {
+  Future<Either<Failure, List<Movie>>> getInitialPopularMovies() async {
     try {
       final _popularMovies = await _remote.getInitialPopularMovies();
       return Right(_popularMovies);
@@ -52,7 +50,7 @@ class MovieRepositoryImpl implements MovieRepository {
   }
 
   @override
-  Future<Either<Failure, ChosenGenre>> chooseGenre({int genreID}) async {
+  Future<Either<Failure, List<Movie>>> chooseGenre({int genreID}) async {
     try {
       final _chosenGenreMovies = await _remote.chooseGenre(genreID: genreID);
       return Right(_chosenGenreMovies);
