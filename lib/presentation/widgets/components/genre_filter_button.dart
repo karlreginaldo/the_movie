@@ -12,7 +12,7 @@ class GenreFilterButton extends StatelessWidget {
     return PopupMenuButton(
       onSelected: (id) =>
           BlocProvider.of<GenreCubit>(context).chooseGenre(genreID: id),
-      child: HOME_DOWN_ICON,
+      child: DROP_DOWN_ICON,
       itemBuilder: (context) {
         return genreList
             .map(

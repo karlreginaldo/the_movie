@@ -25,7 +25,7 @@ class Header extends StatelessWidget {
             onPressed: () async {
               context.read<HomeCubit>().goHome();
             },
-            icon: MENU_BAR_ICON,
+            icon: HOME_BAR_ICON,
           ),
         ),
         Row(
