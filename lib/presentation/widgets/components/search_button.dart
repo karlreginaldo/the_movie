@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../core/constant/color.dart';
 import '../../../core/constant/icon.dart';
 import '../../cubit/home/home_cubit.dart';
+import 'package:sizer/sizer.dart';
 
 class SearchButton extends StatefulWidget {
   const SearchButton({
@@ -20,7 +21,7 @@ class _SearchButtonState extends State<SearchButton> {
   Widget build(BuildContext context) {
     return AnimatedContainer(
       duration: Duration(milliseconds: 600),
-      width: _folded ? 50 : 200,
+      width: _folded ? 50 : 40.0.w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: CONTAINER_COLOR,
