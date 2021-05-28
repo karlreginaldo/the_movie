@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math';
 
 import '../../core/constant/string.dart';
 import '../../core/error/exception.dart';
@@ -53,8 +54,9 @@ class MovieRemoteDataSourceImpl implements MovieRemoteDataSource {
 
   @override
   Future<PopularModel> getInitialPopularMovies() async {
+    //The page I set is randomized with maximum of 500.
     final _response = await _client.get(
-      'https://api.themoviedb.org/3/movie/popular?api_key=$API_KEY&language=en-US&page=3',
+      'https://api.themoviedb.org/3/movie/popular?api_key=$API_KEY&language=en-US&page=${Random().nextInt(500)}',
       headers: {
         'Content-Type': 'application/json',
       },
