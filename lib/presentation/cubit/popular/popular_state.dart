@@ -12,11 +12,11 @@ class PopularInitial extends PopularState {}
 class PopularLoading extends PopularState {}
 
 class PopularLoaded extends PopularState {
-  final Popular popular;
+  final List<Movie> movies;
 
-  PopularLoaded(this.popular);
+  PopularLoaded(this.movies);
   @override
-  List<Object> get props => [popular];
+  List<Object> get props => [movies];
 }
 
 class PopularError extends PopularState {

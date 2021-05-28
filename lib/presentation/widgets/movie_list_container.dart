@@ -7,28 +7,26 @@ import '../../core/constant/string.dart';
 import '../../core/utils/favorite_filter.dart';
 import '../../core/utils/genre_filter.dart';
 import '../../data/models/favorite_model.dart';
-import '../../domain/entities/favorite.dart';
+import '../../domain/entities/movie.dart';
 import '../cubit/favorite/favorite_cubit.dart';
 import '../cubit/movie/movie_details_cubit.dart';
-import 'package:sizer/sizer.dart';
 import '../screens/detail_screen.dart';
+import 'package:sizer/sizer.dart';
 import '../../dependency_injector.dart';
 import 'components/custom_text_quick_sand.dart';
 
-class ResultContainerForFavorite extends StatefulWidget {
-  const ResultContainerForFavorite({
+class MoviesListContainer extends StatefulWidget {
+  const MoviesListContainer({
     Key key,
     @required this.movie,
   }) : super(key: key);
-  final Favorite movie;
+  final Movie movie;
 
   @override
-  _ResultContainerForFavoriteState createState() =>
-      _ResultContainerForFavoriteState();
+  _MoviesListContainerState createState() => _MoviesListContainerState();
 }
 
-class _ResultContainerForFavoriteState
-    extends State<ResultContainerForFavorite> {
+class _MoviesListContainerState extends State<MoviesListContainer> {
   @override
   void initState() {
     super.initState();
@@ -102,11 +100,11 @@ class _ResultContainerForFavoriteState
                               onPressed: () {
                                 context.read<FavoriteCubit>().addFavorite(
                                       fav: FavoriteModel(
-                                        average: widget.movie.average,
+                                        average: widget.movie.voteAverage,
                                         id: widget.movie.id,
                                         overview: widget.movie.overview,
                                         title: widget.movie.title,
-                                        genresId: widget.movie.genresId,
+                                        genresId: widget.movie.genreIds,
                                         posterPath: widget.movie.posterPath,
                                       ),
                                     );
@@ -155,7 +153,7 @@ class _ResultContainerForFavoriteState
                       children: [
                         SmoothStarRating(
                             allowHalfRating: false,
-                            rating: widget.movie.average / 2,
+                            rating: widget.movie.voteAverage / 2,
                             isReadOnly: true,
                             color: Colors.green,
                             size: 15,
@@ -165,7 +163,7 @@ class _ResultContainerForFavoriteState
                           width: 5,
                         ),
                         CustomTextQuickSand(
-                          '${widget.movie.average}',
+                          '${widget.movie.voteAverage}',
                           color: Colors.grey,
                         ),
                       ],
@@ -182,7 +180,7 @@ class _ResultContainerForFavoriteState
                         ),
                         Expanded(
                           child: Wrap(
-                            children: genreFilter(widget.movie.genresId)
+                            children: genreFilter(widget.movie.genreIds)
                                 .map(
                                   (genre) => CustomTextQuickSand(
                                     genre.name + ' ',

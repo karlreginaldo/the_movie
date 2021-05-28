@@ -5,13 +5,13 @@ import '../../core/usecase/usecase.dart';
 import '../entities/movie.dart';
 import '../repositories/movie_repository.dart';
 
-class SearchMovies implements UseCase<Movie, SearchMoviesParams> {
+class SearchMovies implements UseCase<List<Movie>, SearchMoviesParams> {
   final MovieRepository _repo;
 
   SearchMovies(this._repo);
 
   @override
-  Future<Either<Failure, Movie>> call(SearchMoviesParams params) async =>
+  Future<Either<Failure, List<Movie>>> call(SearchMoviesParams params) async =>
       await _repo.searchMovies(query: params.query);
 }
 
