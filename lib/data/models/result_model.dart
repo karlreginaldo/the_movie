@@ -59,7 +59,9 @@ class ResultModel extends Result {
         overview: json["overview"],
         popularity: json["popularity"].toDouble(),
         posterPath: json["poster_path"] == null ? null : json["poster_path"],
-        releaseDate: DateTime.parse(json["release_date"]),
+        releaseDate: (json["release_date"] as String).isNotEmpty
+            ? DateTime.parse(json["release_date"])
+            : DateTime.parse('0000-00-00'),
         title: json["title"],
         video: json["video"],
         voteAverage: json["vote_average"].toDouble(),
