@@ -14,8 +14,8 @@ const CLOSE_ICON = Icon(MaterialIcons.close, color: Colors.green);
 const FAVORITE_ICON = Icon(MaterialIcons.favorite, color: Colors.green);
 
 const MENU_BAR_ICON = Icon(MaterialIcons.menu, color: Colors.green);
-const DROP_DOWN_ICON = Icon(
-  MaterialIcons.arrow_drop_down,
+const HOME_DOWN_ICON = Icon(
+  MaterialIcons.home,
   color: Colors.green,
 );
 
