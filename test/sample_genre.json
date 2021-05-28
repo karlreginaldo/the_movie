@@ -1,80 +1,400 @@
 {
-    "genres": [
+    "page": 1,
+    "results": [
         {
-            "id": 28,
-            "name": "Action"
+            "adult": false,
+            "backdrop_path": "/wwFBRyekDcKXJwP0mImRJjAnudL.jpg",
+            "genre_ids": [
+                27
+            ],
+            "id": 632357,
+            "original_language": "en",
+            "original_title": "The Unholy",
+            "overview": "Alice, a young hearing-impaired girl who, after a supposed visitation from the Virgin Mary, is inexplicably able to hear, speak and heal the sick. As word spreads and people from near and far flock to witness her miracles, a disgraced journalist hoping to revive his career visits the small New England town to investigate. When terrifying events begin to happen all around, he starts to question if these phenomena are the works of the Virgin Mary or something much more sinister.",
+            "popularity": 3681.658,
+            "poster_path": "/b4gYVcl8pParX8AjkN90iQrWrWO.jpg",
+            "release_date": "2021-03-31",
+            "title": "The Unholy",
+            "video": false,
+            "vote_average": 7.2,
+            "vote_count": 500
         },
         {
-            "id": 12,
-            "name": "Adventure"
+            "adult": false,
+            "backdrop_path": "/c0izdYdnTe4uMRifHgvTA85wPz0.jpg",
+            "genre_ids": [
+                28,
+                27,
+                53
+            ],
+            "id": 503736,
+            "original_language": "en",
+            "original_title": "Army of the Dead",
+            "overview": "Following a zombie outbreak in Las Vegas, a group of mercenaries take the ultimate gamble: venturing into the quarantine zone to pull off the greatest heist ever attempted.",
+            "popularity": 2362.737,
+            "poster_path": "/z8CExJekGrEThbpMXAmCFvvgoJR.jpg",
+            "release_date": "2021-05-14",
+            "title": "Army of the Dead",
+            "video": false,
+            "vote_average": 6.7,
+            "vote_count": 960
         },
         {
-            "id": 16,
-            "name": "Animation"
+            "adult": false,
+            "backdrop_path": "/xrAaJAn3hqkInq5kE1AGJqIGXyT.jpg",
+            "genre_ids": [
+                27
+            ],
+            "id": 573680,
+            "original_language": "en",
+            "original_title": "The Banishing",
+            "overview": "In the 1930s, a young reverend and his family are forced to confront their worst fears when they discover their new home holds a horrifying secret.",
+            "popularity": 1068.495,
+            "poster_path": "/xD9mc8JCVXA8T8u4Od7qOUBuGH4.jpg",
+            "release_date": "2021-04-29",
+            "title": "The Banishing",
+            "video": false,
+            "vote_average": 6.7,
+            "vote_count": 13
         },
         {
-            "id": 35,
-            "name": "Comedy"
+            "adult": false,
+            "backdrop_path": "/jFINtstDUh0vHOGImpMAmLrPcXy.jpg",
+            "genre_ids": [
+                28,
+                27,
+                35
+            ],
+            "id": 643586,
+            "original_language": "en",
+            "original_title": "Willy's Wonderland",
+            "overview": "When his car breaks down, a quiet loner agrees to clean an abandoned family fun center in exchange for repairs. He soon finds himself waging war against possessed animatronic mascots while trapped inside Willy's Wonderland.",
+            "popularity": 605.729,
+            "poster_path": "/keEnkeAvifw8NSEC4f6WsqeLJgF.jpg",
+            "release_date": "2021-02-12",
+            "title": "Willy's Wonderland",
+            "video": false,
+            "vote_average": 6.8,
+            "vote_count": 225
         },
         {
-            "id": 80,
-            "name": "Crime"
+            "adult": false,
+            "backdrop_path": "/czHYg6LQ5926OL8wj5kC09pNR12.jpg",
+            "genre_ids": [
+                27,
+                35
+            ],
+            "id": 647302,
+            "original_language": "en",
+            "original_title": "Benny Loves You",
+            "overview": "Jack, a man desperate to improve his life throws away his beloved childhood plush, Benny. It’s a move that has disastrous consequences when Benny springs to life with deadly intentions!",
+            "popularity": 361.621,
+            "poster_path": "/mQ8vALvqA0z0qglG3gI6xpVcslo.jpg",
+            "release_date": "2019-11-21",
+            "title": "Benny Loves You",
+            "video": false,
+            "vote_average": 6,
+            "vote_count": 28
         },
         {
-            "id": 99,
-            "name": "Documentary"
+            "adult": false,
+            "backdrop_path": "/fRrpOILyXuWaWLmqF7kXeMVwITQ.jpg",
+            "genre_ids": [
+                27,
+                53,
+                12,
+                9648
+            ],
+            "id": 522444,
+            "original_language": "en",
+            "original_title": "Black Water: Abyss",
+            "overview": "An adventure-loving couple convince their friends to explore a remote, uncharted cave system in the forests of Northern Australia. With a tropical storm approaching, they abseil into the mouth of the cave, but when the caves start to flood, tensions rise as oxygen levels fall and the friends find themselves trapped. Unknown to them, the storm has also brought in a pack of dangerous and hungry crocodiles.",
+            "popularity": 406.083,
+            "poster_path": "/95S6PinQIvVe4uJAd82a2iGZ0rA.jpg",
+            "release_date": "2020-07-09",
+            "title": "Black Water: Abyss",
+            "video": false,
+            "vote_average": 5.1,
+            "vote_count": 216
         },
         {
-            "id": 18,
-            "name": "Drama"
+            "adult": false,
+            "backdrop_path": "/v0bFTXnLNh9cjvpIckJpIM2t9nf.jpg",
+            "genre_ids": [
+                27
+            ],
+            "id": 631583,
+            "original_language": "en",
+            "original_title": "Sacrifice",
+            "overview": "Isaac and his pregnant wife visit a remote Norwegian village to claim an unexpected inheritance. The couple finds themselves caught in a nightmare when they encounter a sinister cult that worships a sea-dwelling deity.",
+            "popularity": 390.037,
+            "poster_path": "/xXI5Lg6mJLEesTggRJBrq50vrqU.jpg",
+            "release_date": "2021-02-09",
+            "title": "Sacrifice",
+            "video": false,
+            "vote_average": 5.7,
+            "vote_count": 7
         },
         {
-            "id": 10751,
-            "name": "Family"
+            "adult": false,
+            "backdrop_path": "/y07caIA4yErsDOZ2IzfSDGzTz7B.jpg",
+            "genre_ids": [
+                27,
+                878
+            ],
+            "id": 791910,
+            "original_language": "en",
+            "original_title": "Rise of the Mummy",
+            "overview": "A group of archaeology students awaken an ancient mummy. After being trapped in a time loop, the only way they can escape, is to defeat the mummy. As the body count rises, it seems the Mummy has to collect the souls of those who woke him to be able to walk the earth - for good.",
+            "popularity": 288.322,
+            "poster_path": "/tmghT8HaddVIS9hEXIOI9GuDchi.jpg",
+            "release_date": "2021-04-03",
+            "title": "Rise of the Mummy",
+            "video": false,
+            "vote_average": 4.3,
+            "vote_count": 20
         },
         {
-            "id": 14,
-            "name": "Fantasy"
+            "adult": false,
+            "backdrop_path": "/ww7eC3BqSbFsyE5H5qMde8WkxJ2.jpg",
+            "genre_ids": [
+                28,
+                27,
+                878,
+                53
+            ],
+            "id": 443791,
+            "original_language": "en",
+            "original_title": "Underwater",
+            "overview": "After an earthquake destroys their underwater station, six researchers must navigate two miles along the dangerous, unknown depths of the ocean floor to make it to safety in a race against time.",
+            "popularity": 297.779,
+            "poster_path": "/gzlbb3yeVISpQ3REd3Ga1scWGTU.jpg",
+            "release_date": "2020-01-08",
+            "title": "Underwater",
+            "video": false,
+            "vote_average": 6.3,
+            "vote_count": 2067
         },
         {
-            "id": 36,
-            "name": "History"
+            "adult": false,
+            "backdrop_path": "/u5WUCO6irZoq27qbYYrtLUrCGDV.jpg",
+            "genre_ids": [
+                27,
+                53
+            ],
+            "id": 630586,
+            "original_language": "en",
+            "original_title": "Wrong Turn",
+            "overview": "Jen and a group of friends set out to hike the Appalachian Trail. Despite warnings to stick to the trail, the hikers stray off course—and cross into land inhabited by The Foundation, a hidden community of mountain dwellers who use deadly means to protect their way of life.",
+            "popularity": 279.247,
+            "poster_path": "/4U1SBHmwHkNA0eHZ2n1CuiC1K1g.jpg",
+            "release_date": "2021-01-26",
+            "title": "Wrong Turn",
+            "video": false,
+            "vote_average": 6.1,
+            "vote_count": 408
         },
         {
-            "id": 27,
-            "name": "Horror"
+            "adult": false,
+            "backdrop_path": "/yuxdzbQHEecWGOvaXeEYVtIyAfn.jpg",
+            "genre_ids": [
+                878,
+                27
+            ],
+            "id": 515454,
+            "original_language": "en",
+            "original_title": "Come True",
+            "overview": "Looking for an escape from her recurring nightmares, 18-year-old Sarah submits to a university sleep study, but soon realizes she's become the conduit to a frightening new discovery.",
+            "popularity": 216.399,
+            "poster_path": "/hGPGRRz6FTIRed1zestdWrV2Iwd.jpg",
+            "release_date": "2021-03-12",
+            "title": "Come True",
+            "video": false,
+            "vote_average": 6,
+            "vote_count": 50
         },
         {
-            "id": 10402,
-            "name": "Music"
+            "adult": false,
+            "backdrop_path": "/54yrEMg3KeTbpr3kYpIGU04a9D5.jpg",
+            "genre_ids": [
+                28,
+                27,
+                9648
+            ],
+            "id": 722780,
+            "original_language": "en",
+            "original_title": "For the Sake of Vicious",
+            "overview": "An overworked nurse returns home to find a maniac hiding out with a bruised and beaten hostage. When an unexpected wave of violent intruders descend upon her home, it becomes a fight for survival.",
+            "popularity": 205.968,
+            "poster_path": "/iqO2sTFqm6XwEXmlLxKDX75RPjY.jpg",
+            "release_date": "2021-04-16",
+            "title": "For the Sake of Vicious",
+            "video": false,
+            "vote_average": 7.9,
+            "vote_count": 10
         },
         {
-            "id": 9648,
-            "name": "Mystery"
+            "adult": false,
+            "backdrop_path": "/8rIoyM6zYXJNjzGseT3MRusMPWl.jpg",
+            "genre_ids": [
+                10751,
+                14,
+                12,
+                35,
+                27
+            ],
+            "id": 531219,
+            "original_language": "en",
+            "original_title": "Roald Dahl's The Witches",
+            "overview": "In late 1967, a young orphaned boy goes to live with his loving grandma in the rural Alabama town of Demopolis. As the boy and his grandmother encounter some deceptively glamorous but thoroughly diabolical witches, she wisely whisks him away to a seaside resort. Regrettably, they arrive at precisely the same time that the world's Grand High Witch has gathered.",
+            "popularity": 276.441,
+            "poster_path": "/b1C0FuXp4wiPmHLVKq4kwtDMgK6.jpg",
+            "release_date": "2020-10-25",
+            "title": "Roald Dahl's The Witches",
+            "video": false,
+            "vote_average": 6.7,
+            "vote_count": 1584
         },
         {
-            "id": 10749,
-            "name": "Romance"
+            "adult": false,
+            "backdrop_path": "/7KL4yJ4JsbtS1BNRilUApLvMnc5.jpg",
+            "genre_ids": [
+                53,
+                18,
+                27
+            ],
+            "id": 649087,
+            "original_language": "sv",
+            "original_title": "Red Dot",
+            "overview": "On a hiking trip to rekindle their marriage, a couple find themselves fleeing for their lives in the unforgiving wilderness from an unknown shooter.",
+            "popularity": 274.959,
+            "poster_path": "/xZ2KER2gOHbuHP2GJoODuXDSZCb.jpg",
+            "release_date": "2021-02-11",
+            "title": "Red Dot",
+            "video": false,
+            "vote_average": 5.9,
+            "vote_count": 465
         },
         {
-            "id": 878,
-            "name": "Science Fiction"
+            "adult": false,
+            "backdrop_path": "/eqVgQwv8HfDN2tv4XWhqW5GryV4.jpg",
+            "genre_ids": [
+                27,
+                35
+            ],
+            "id": 607383,
+            "original_language": "en",
+            "original_title": "Aquaslash",
+            "overview": "To celebrate their graduation, the teenagers from Valley Hills High School have organized an ’80s-themed party at the old Wet Valley water park. Things turn gruesome when it's revealed that a mysterious maniac has inserted giant razor blades into one of the water slides. The water park thus becomes the backdrop for a bloodbath (literally), and everyone is a suspect...",
+            "popularity": 206.82,
+            "poster_path": "/wB8qqLIaYDkYEnjbS5hAJiTuYU6.jpg",
+            "release_date": "2019-07-29",
+            "title": "Aquaslash",
+            "video": false,
+            "vote_average": 4.1,
+            "vote_count": 55
         },
         {
-            "id": 10770,
-            "name": "TV Movie"
+            "adult": false,
+            "backdrop_path": "/7JENyUT8ABxcvrcijDBVpdjgCY9.jpg",
+            "genre_ids": [
+                53,
+                27,
+                9648
+            ],
+            "id": 602734,
+            "original_language": "en",
+            "original_title": "Spiral: From the Book of Saw",
+            "overview": "Working in the shadow of an esteemed police veteran, brash Detective Ezekiel “Zeke” Banks and his rookie partner take charge of a grisly investigation into murders that are eerily reminiscent of the city’s gruesome past.  Unwittingly entrapped in a deepening mystery, Zeke finds himself at the center of the killer’s morbid game.",
+            "popularity": 219.687,
+            "poster_path": "/lcyKve7nXRFgRyms9M1bndNkKOx.jpg",
+            "release_date": "2021-05-12",
+            "title": "Spiral: From the Book of Saw",
+            "video": false,
+            "vote_average": 6.3,
+            "vote_count": 52
         },
         {
-            "id": 53,
-            "name": "Thriller"
+            "adult": false,
+            "backdrop_path": "/2F6zpkkMianLO9JRRvnujpW4bzp.jpg",
+            "genre_ids": [
+                14,
+                27,
+                10770
+            ],
+            "id": 794960,
+            "original_language": "en",
+            "original_title": "Blood Moon",
+            "overview": "When Esme and her ten-year-old son, Luna move to a small desert town looking for a fresh start, they attract all the wrong kinds of attention. Esme must battle to protect her son and a terrifying secret before the next full moon reveals all.",
+            "popularity": 182.523,
+            "poster_path": "/9umVH1R5Z2I1Fqzg7qwMIR2gpKG.jpg",
+            "release_date": "2021-03-26",
+            "title": "Blood Moon",
+            "video": false,
+            "vote_average": 6.5,
+            "vote_count": 21
         },
         {
-            "id": 10752,
-            "name": "War"
+            "adult": false,
+            "backdrop_path": "/iID0at69rWzZOIarUIFrfDOFJA.jpg",
+            "genre_ids": [
+                27,
+                14,
+                18,
+                10770
+            ],
+            "id": 786300,
+            "original_language": "en",
+            "original_title": "Tentacles",
+            "overview": "A young Los Angeles couple Tara and Sam fall head over heels into a new romance, entwining their lives — until their intimacy transforms into something terrifying.",
+            "popularity": 190.733,
+            "poster_path": "/kBKKXVbVwIP81u8Bnhguux48Sdn.jpg",
+            "release_date": "2021-02-12",
+            "title": "Tentacles",
+            "video": false,
+            "vote_average": 6.5,
+            "vote_count": 70
         },
         {
-            "id": 37,
-            "name": "Western"
+            "adult": false,
+            "backdrop_path": "/sWHlCeJ2RunM5eq3FYA4VuTUNqY.jpg",
+            "genre_ids": [
+                27,
+                9648,
+                53
+            ],
+            "id": 259693,
+            "original_language": "en",
+            "original_title": "The Conjuring 2",
+            "overview": "Lorraine and Ed Warren travel to north London to help a single mother raising four children alone in a house plagued by malicious spirits.",
+            "popularity": 234.722,
+            "poster_path": "/zEqyD0SBt6HL7W9JQoWwtd5Do1T.jpg",
+            "release_date": "2016-05-13",
+            "title": "The Conjuring 2",
+            "video": false,
+            "vote_average": 7.2,
+            "vote_count": 5882
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/l5yp73psXVRYy2ce09lD8yDuu2g.jpg",
+            "genre_ids": [
+                27,
+                53
+            ],
+            "id": 138843,
+            "original_language": "en",
+            "original_title": "The Conjuring",
+            "overview": "Paranormal investigators Ed and Lorraine Warren work to help a family terrorized by a dark presence in their farmhouse. Forced to confront a powerful entity, the Warrens find themselves caught in the most terrifying case of their lives.",
+            "popularity": 216.895,
+            "poster_path": "/wVYREutTvI2tmxr6ujrHT704wGF.jpg",
+            "release_date": "2013-03-20",
+            "title": "The Conjuring",
+            "video": false,
+            "vote_average": 7.5,
+            "vote_count": 8195
         }
-    ]
+    ],
+    "total_pages": 500,
+    "total_results": 10000
 }
